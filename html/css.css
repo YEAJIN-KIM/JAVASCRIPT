@@ -1,0 +1,12 @@
+div {
+    color: orangered;
+    background-color: rgb(169, 245, 248);
+    cursor: pointer;
+    text-shadow: 19px 10px 5px rgb(35, 103, 228);
+}
+
+h2:hover {
+    color: rgb(255, 172, 47);
+    font-size: 20pt;
+    transition: 0.5 ease-in;
+}

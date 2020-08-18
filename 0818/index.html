@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- option 에는 difer가 좋아요 !-->
+    <!-- jQuery = $ !-->
+    <script>
+    $(document).ready(function(){ //js main( 준비 완료 )
+        //jQuery 
+    });
+    jQuery(function(){
+        //jQuery main 
+    });
+    </script>
+    
+    <script src='index_check.js'></script>
+    <script src='validation_check.js'></script>
+</head>
+<body>
+    <table  width="600" height="300">
+        <td align="center">
+            <h1 align = "center">SIGN IN</h1>
+            <!-- method default = get-->
+            <form name ="f" onsubmit="return check()">
+            ID &nbsp;: <input name = "i1" maxlength="10"><p>
+            PW : <input name = "i2" minlength="3"><p>
+            PW : <input name = "i3" minlength="3"><p>
+            PHONE : <input name = "i4" minlength="3">
+            <button>ok</button>
+
+            </form>
+        </td>
+    </table>
+
+</body>
+</html>
