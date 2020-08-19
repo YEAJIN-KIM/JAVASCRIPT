@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--mobile 최적화 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table{
+            width: 150px;
+        }
+        img {
+        
+            height: 50px;
+        }
+        tr{
+            height: 50px;
+            
+        }
+        td{
+            width: 50px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+    
+    <!--slider-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+
+</head>
+<body>
+<div id = "p1" data-role="page">
+        <div data-role="header" data-theme="e" data-position="fixed">
+            <h1>p1</h1>
+        </div>
+
+    <div data-role="content">
+        <a href="#p2" data-transition="turn" data-role="button" data-theme="e">p2</a>
+        <a href="#wether" data-transition="turn" data-role="button" data-theme="e" button id ="cityBtn">WEATHER</a>
+    </div>
+    <div data-role="footer" data-theme="e" data-position="fixed">
+        <h2>created by @yeajin</h2>
+    
+    </div>
+</div>
+<!-- ----★----★----★----★----★------>
+<div id = "p2" data-role="page">
+        <div data-role="header" data-theme="e" data-position="fixed">
+            <a href ="#p1" data-icon="arrow-l">back</a>
+            <h1>p2</h1>
+            <button onclick="location.href='https://m.naver.com'">NAVER</button>
+    </div>
+
+    <div data-role="content">
+        <ul data-role="listview" data-insert="true" data-filter="true">
+            <li data-role="list-divider" data-theme="e">study!</li>
+            <li>html</li>
+            <li>css</li>
+            <li>js</li>
+
+            <li data-role="list-divider" data-theme="e">subject!</li>
+            <li>javascript</li>
+            <li>jquery</li>
+            <li><a href="#p3" data-transition="slide">jQuery Mobile</a></li>
+        </ul><br><br>
+
+    </div>
+        <a href="#bxslider" data-theme="b">
+            <button>SLIDER</button>
+        </a>
+    
+    <div data-role="footer" data-theme="e" data-position="fixed">
+        <h2>created by @YEAJIN</h2>
+
+    </div>
+</div>
+<!-- ----★----★----★----★----★------>
+<div id = "p3" data-role="page">
+    <div data-role="header" data-theme="e" data-position="fixed">
+        <a href ="#p2" data-icon="arrow-l">back</a>
+        <h1>jQuery Mobile</h1>
+    </div>
+
+    <div data-role="content" data-theme="e" >
+        <h2>jQuery Mobile</h2><br>
+
+        <a href="#p1" data-transition="fade" >
+            <input type="button" value="MAIN">
+        </a>
+
+        <a href="#p1" data-transition="pop">
+           
+            <button>MAIN_1</button>
+        </a>
+
+        <a href="#p1" data-transition="flip">
+           
+            <button>MAIN_2</button>
+        </a>
+
+        <a href="#p1" data-transition="turn">
+           
+            <button>MAIN_3</button>
+        </a>   
+
+    </div>
+
+    <div data-role="footer" data-theme="e" data-position="fixed">
+        <h2>created by @YEAJIN</h2>
+
+    </div>
+</div>
+<!-- ----★----★----★----★----★------>
+<script>
+    $(document).ready(function(){
+      $('.slider').bxSlider({
+          mode: 'fade', //mode
+          captions: true, //description
+          slideWidth: 300,
+          auto: true,
+          autoControls: true,
+          pager: true
+      });
+    });
+</script>
+
+<div id = "bxslider" data-role="page">
+    <div data-role="header" data-theme="e" data-position="fixed">
+        <a href ="#p2" data-icon="arrow-l">back</a>
+        <h1>bx-slide</h1>
+    </div>
+
+
+    <div data-role="content">
+        <div class="slider">
+            <div><img title="Ryan" src="data:image/jpeg;base64,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"></div>
+            <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQqXNpBeowePcp59kMZ5GOJK7VhH0OeQtIhZA&usqp=CAU"></div>
+            <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTjFziWZMY9O40l9HF9twERnciXJzyKYA4P_Q&usqp=CAU"></div>
+            
+        </div>
+    
+    </div>
+
+    <div data-role="footer" data-theme="e" data-position="fixed">
+        <h2>created by @yeajin</h2>
+
+    </div>
+</div>
+<!-- ----★----★----★----★----★------>
+<!--weather-->
+<script>
+    $("#cityBtn").click(function(){
+        let apiUrl = "https://api.openweathermap.org/data/2.5/weather?q="+"cheonan"+"&appid="+"ce3ec5659c063a35c389fd1eeb5e0a67"+"&units=metric";
+
+    $.ajax({
+            url: apiUrl,
+           // https://api.openweathermap.org/data/2.5/weather?q=cheonan&appid=ce3ec5659c063a35c389fd1eeb5e0a67 
+            type : "GET",
+            success : function (data) {
+                data.value="";
+
+                console.log(data);
+                console.log("현재온도 : "+ data.main.temp );
+                console.log("체감온도 :" + data.main.feels_like);
+                console.log("현재습도 : "+ data.main.humidity);
+                console.log("날씨 : "+ data.weather[0].main );
+                console.log("상세날씨설명 : "+ data.weather[0].description );
+                console.log("날씨 이미지 : "+ data.weather[0].icon );
+                console.log("바람   : "+ data.wind.speed );
+                console.log("나라   : "+ data.sys.country );
+                console.log("도시이름  : "+ data.name );
+                console.log("구름  : "+ (data.clouds.all) +"%" ); 
+                
+                let temp = data.main.temp;
+                let tempr = data.main.feels_like;
+                let humidity = data.main.humidity;
+                let weatherm = data.weather[0].main;
+                let weatherd = data.weather[0].description;
+                let country = data.sys.country;
+                let city = data.name;
+                let wind = data.wind.speed;
+                let cloud = data.clouds.all;
+
+
+                let imgURL = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+              
+              /*아이콘 표시*/
+              $('#img').attr("src", imgURL);
+
+              /* print out*/
+              $('#country').append( '✈ '+ country +', '+ city  );  
+              $('#temp').append(  temp + '℃' );  
+              $('#tempr').append( 'Feels_like ' + tempr + 'ºC' );  
+              $('#humidity').append('🌧 '+ humidity + '%'); 
+              $('#weatherm').append('✿ '+weatherm ); 
+              $('#wind').append('➼ '+wind +'m/s' ); 
+              $('#cloud').append('☁ '+ cloud + '%'); 
+
+              
+
+            }
+            
+        }); 
+    }); 
+    
+</script>
+
+<div id = "wether" data-role="page">
+    <div data-role="header" data-theme="e" data-position="fixed">
+        <a href ="#p1" data-icon="arrow-l">back</a>
+        <h1>WEATHER</h1>
+    </div>
+
+    <div data-role="content">
+        <form id="country" class="country" style="color:rgb(57, 60, 68); "></form>
+        <table>
+            <tr>
+                <td><img class="wether_info" src="" id="img"></img></td>  <td><form id="temp" class="temp" style="color: lightcoral; font-size: 30px;"></form></td>
+            </tr>
+        </table>
+        
+        
+        <form id="tempr" class="tempr" style="color:rgb(57, 60, 68); background-color: rgb(252, 241, 146);"></form>
+        
+      
+        <table>
+            <tr>
+                <td><form id="humidity" class="humidity" style="color:rgb(137, 210, 235);"></form></td>
+                <td><form id="cloud" class="cloud" style="color:rgb(71, 163, 224);"></form></td>
+                <td><form id="wind" class="wind" style="color:rgb(98, 133, 209);"></form></td> 
+                
+            </tr>
+        </table>
+
+        
+        <form id="weatherm" class="weatherm" style="color:rgb(106, 192, 96);"></form>
+        
+            
+            
+ 
+        </div>
+    
+    </div>
+  
+
+    <div data-role="footer" data-theme="e" data-position="fixed">
+        <h2>created by @yeajin</h2>
+
+    </div>
+</div>
+</body>
+</html>

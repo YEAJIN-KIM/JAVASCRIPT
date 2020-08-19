@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUSTOM DATA ATTRIBUTES</title>
+    <style>
+        #span1 {
+            display: block;
+            margin: 10px 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- ★ add a paragraph with custom data attributes
+         ★ add a push button
+         ★ add an output span-->
+
+    <div id="div" data-first="Apple" data-second="Cherry" data-third="Banana">
+        <button id="button1" type="button">
+            click !
+        </button>
+            <span id="span1">Here some fruits will appear..</span>
+    </div> 
+        
+    <script>
+    /*   ★ on button click, read from the custom data set
+         ★ and echo them into the  output area*/
+         let div = document.getElementById("div");
+         let button1 = document.getElementById("button1");
+         let div1 = document.getElementById("span1");
+
+         let pos = 0;
+         let name = "";
+         let names = ["first","second","third"];
+
+         button1.addEventListener("click", function(){
+            name = names[pos];
+            console.log("Name is now" + name);
+            div1.innerHTML = div.dataset[name];
+            pos = ++pos % 3;
+         });
+
+    </script>
+
+
+</body>
+</html>
